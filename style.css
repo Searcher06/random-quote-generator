@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: rgba(32, 19, 109, 0.007);
+}
+.container {
+    width: 500px;
+}
+.container h2 {
+    font-family:Constantia;
+    font-size:25px;
+    color:  rgb(8, 25, 68);;
+}
+.quote-container {
+    box-shadow: 0px 1px 2px 2px rgb(211, 208, 208);
+    padding: 20px;
+    border-radius: 9px;
+}
+.quote-container p {
+    font-family:Lucida Calligraphy;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+    width: 500px;
+    align-items: center;
+}
+.button-container button {
+    height: 40px;
+    width: 60px;
+    font-family: Tahoma;
+    text-transform: uppercase;
+    border-radius:4px;
+    border: none;
+    box-shadow: 0px 1px 2px 1px;
+    background-color: rgb(8, 25, 68);
+    color:white;
+    margin-left: 5px;
+}
+button:active{
+    background-color: rgb(11, 66, 53);
+    color:white;
+}
+h2::first-letter{
+    font-size: 30px;
+    color: rgb(11, 66, 53);
+    font-family: Lucida Handwriting;
+}
+.btn {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
