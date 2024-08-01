@@ -19,7 +19,7 @@
         <div class="btn">
         <div class="button-container">
             <button onclick="generate()">></button>
-            <button>Save</button>
+            <button onclick="save()>Save</button>
         </div>
         </div>
     </div>
@@ -67,7 +67,24 @@
           return quote.innerHTML = randomQoute;
         }
         
-        document.onload(document.getElementById("quote").textContent = arrayOfQuote[Math.floor(Math.random() * 10)])
+        document.onload(document.getElementById("quote").textContent = arrayOfQuote[Math.floor(Math.random() * 10)]);
+                 function save(){
+            let quoteValue = document.getElementById('quote').textContent;
+            //converting the text to blob.
+            const texToBlob = new Blob([quoteValue], { type: "text/plain" });
+            var fileName = "My quote.txt";
+            let newLink = document.createElement("a");
+            newLink.download = fileName;
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(texToBlob);
+           alert('Saved Successfully')
+            } else {
+                newLink.href = window.URL.createObjectURL(texToBlob);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink)
+            }
+            newLink.click()
+        };
     </script>
 </body>
 </html>
