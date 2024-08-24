@@ -10,7 +10,9 @@
 <body>
     <div class="container">
         
-        <h2>Random Quote Generator</h2>
+        <div class="header">
+            <h2>Random Quote Generator</h2>
+        </div>
         
         <div class="quote-container">
         <p>
@@ -19,7 +21,7 @@
         <div class="btn">
         <div class="button-container">
             <button onclick="generate()">></button>
-            <button onclick="save()>Save</button>
+            <button onclick="save()">Save</button>
         </div>
         </div>
     </div>
@@ -68,7 +70,8 @@
         }
         
         document.onload(document.getElementById("quote").textContent = arrayOfQuote[Math.floor(Math.random() * 10)]);
-                 function save(){
+        
+        function save(){
             let quoteValue = document.getElementById('quote').textContent;
             //converting the text to blob.
             const texToBlob = new Blob([quoteValue], { type: "text/plain" });
@@ -85,6 +88,7 @@
             }
             newLink.click()
         };
+
     </script>
 </body>
 </html>
